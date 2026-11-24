@@ -3,6 +3,12 @@
 
 The `src/` directory contains four scripts that should be executed sequentially. Input files are stored in `data/`, and output files are written to `out/`.
 
+## Dependencies
+The scripts require the following Python packages:
+- `numpy`
+- `scipy`
+- `gmsh` (Python API for Gmsh)
+
 ## Quick Start
 
 Run the following commands from the `python_code/` directory.
@@ -10,10 +16,10 @@ Run the following commands from the `python_code/` directory.
 **Before running the scripts, extract `data/Tec_FaciesZone-Indic.plt.zip` into the `data/` directory to obtain the corresponding `.plt` file. This step can be skipped if the file already exists.**
 
 ```bash
-python3 src/1_create_tri_mesh_2d.py --quiet
-python3 src/2_2d_ext_3d.py --quiet
-python3 src/3_assign_facies_3d.py --quiet
-python3 src/4_Find_Sourcing_Nodes.py
+python3 1_create_tri_mesh_2d.py --quiet
+python3 2_2d_ext_3d.py --quiet
+python3 3_assign_facies_3d.py --quiet
+python3 4_Find_Sourcing_Nodes.py
 ```
 
 ## Script Overview

@@ -1,0 +1,48 @@
+# Track Python source, input data, ignore rules, and directory placeholders.
+*
+!*/
+!*.py
+!.gitignore
+!.gitkeep
+
+# Track input data except the uncompressed facies coordinates.
+!/data/**
+/data/Tec_FaciesZone-Indic.plt
+
+# Add an empty .gitkeep to preserve a business directory without its data.
+# Exclusions below also apply to otherwise allowed files and placeholders.
+tests/
+[Rr][Ee][Aa][Dd][Mm][Ee]*
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local Python environments and build artifacts
+.venv/
+venv/
+env/
+.env
+.env.*
+build/
+dist/
+*.egg-info/
+
+# Local editor state and temporary files
+.idea/
+.vscode/
+.ipynb_checkpoints/
+*.swp
+*.swo
+*~
+~$*
+
+# macOS metadata
+.DS_Store
+._*
